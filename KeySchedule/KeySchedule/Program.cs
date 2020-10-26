@@ -6,7 +6,12 @@ namespace KeySchedule
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Start");
+
+            DFS dfs = new DFS();
+            dfs.Search(0b1100010001000, 0);
+
+            Console.WriteLine("End");
         }
     }
 }

@@ -1,0 +1,13 @@
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\bin\Debug\netcoreapp3.1\KeySchedule.exe
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\bin\Debug\netcoreapp3.1\KeySchedule.deps.json
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\bin\Debug\netcoreapp3.1\KeySchedule.runtimeconfig.json
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\bin\Debug\netcoreapp3.1\KeySchedule.runtimeconfig.dev.json
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\bin\Debug\netcoreapp3.1\KeySchedule.dll
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\bin\Debug\netcoreapp3.1\KeySchedule.pdb
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\obj\Debug\netcoreapp3.1\KeySchedule.csprojAssemblyReference.cache
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\obj\Debug\netcoreapp3.1\KeySchedule.AssemblyInfoInputs.cache
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\obj\Debug\netcoreapp3.1\KeySchedule.AssemblyInfo.cs
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\obj\Debug\netcoreapp3.1\KeySchedule.csproj.CoreCompileInputs.cache
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\obj\Debug\netcoreapp3.1\KeySchedule.dll
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\obj\Debug\netcoreapp3.1\KeySchedule.pdb
+C:\Users\松永創\Documents\GitClone\Windows\KeySchedule\KeySchedule\KeySchedule\obj\Debug\netcoreapp3.1\KeySchedule.genruntimeconfig.cache
