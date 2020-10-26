@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.IO;
 
 namespace KeySchedule
 {
@@ -59,17 +60,20 @@ namespace KeySchedule
             }
         }*/
 
-        public void Search(uint key,int box)
+        public void Search(uint key, int box)
         {
-            Open(key, box,0);
+            string answer = "";
+
+            Open(key, box, 0, answer);
         }
 
-        private void Open(uint key, int box, int day)
+        private void Open(uint key, int box, int day, string answer)
         {
             //シフト表の外
             if (schedule[0].Length <= day)
             {
-                Console.WriteLine("LastDay!!!");
+                Console.WriteLine("Answer");
+                Console.Write(answer);
 
                 return;
             }
@@ -79,12 +83,14 @@ namespace KeySchedule
             {
                 Console.WriteLine("Day" + day + " Open!");
 
+                answer += Convert.ToString(key, 2)+Environment.NewLine;
+
                 //業務開始
-                DepositKey(key, box, day, OPEN);
+                DepositKey(key, box, day, OPEN, answer);
             }
         }
 
-        private void DepositKey(uint key, int box, int day, int time)
+        private void DepositKey(uint key, int box, int day, int time, string answer)
         {
             //全員についてチェック
             for (int p = 0; p < schedule.Length; p++)
@@ -104,10 +110,10 @@ namespace KeySchedule
             }
 
             //鍵回収フェイズへ
-            GetKey(key, box, day, time, 0);
+            GetKey(key, box, day, time, 0, answer);
         }
 
-        private void GetKey(uint key, int box, int day, int time, int p_start)
+        private void GetKey(uint key, int box, int day, int time, int p_start, string answer)
         {
             //行動を未決定の従業員についてチェック
             for (int p = p_start; p < schedule.Length; p++)
@@ -119,7 +125,7 @@ namespace KeySchedule
                     if (box >= 1)
                     {
                         //鍵を取る
-                        GetKey(key | (ONE << p), box - 1, day, time, p + 1);
+                        GetKey(key | (ONE << p), box - 1, day, time, p + 1, answer);
                     }
                 }
             }
@@ -128,21 +134,21 @@ namespace KeySchedule
             if (time >= CLOSE)
             {
                 //閉店作業
-                Close(key, box, day);
+                Close(key, box, day, answer);
             }
             else
             {
                 //時間を進める
-                DepositKey(key, box, day, time + 1);
+                DepositKey(key, box, day, time + 1, answer);
             }
         }
 
-        private void Close(uint key,int box,int day)
+        private void Close(uint key, int box, int day, string answer)
         {
             //閉店可能
             if (CanOpenClose(key, CLOSE, day))
             {
-                Open(key, box, day + 1);
+                Open(key, box, day + 1, answer);
             }
 
             return;
